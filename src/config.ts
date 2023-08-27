@@ -13,7 +13,7 @@ const linkList = ref<Array<linkListType>>([
         link: 'https://space.bilibili.com/1459104794'
     },
     {
-        name: '官方 Youtube',
+        name: '官方 YouTube',
         icon: 'fa6-brands:square-youtube',
         link: 'https://www.youtube.com/channel/UC80p_16pSSHA8YmtCVdX51w?sub_confirmation=1'
     }
