@@ -12,6 +12,7 @@
   "dependencies": {
     "@types/vue": "^2.0.0",
     "add": "^2.0.6",
+    "animate.css": "^4.1.1",
     "autoprefixer": "^10.4.15",
     "daisyui": "^3.6.3",
     "postcss": "^8.4.28",

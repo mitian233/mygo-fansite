@@ -18,8 +18,8 @@ waitLoading();
 </script>
 
 <template>
-  <Transition name="slide">
-    <div v-if="showLoading" class="absolute h-screen w-full bg-[#3388bb] z-10">
+  <Transition name="slide-out-fwd-center">
+    <div v-if="showLoading" class="fixed h-screen w-full bg-[#3388bb] z-50">
       <loading :page-loaded='onLoading'/>
     </div>
   </Transition>
@@ -37,6 +37,21 @@ waitLoading();
 .slide-enter-from,
 .slide-leave-to {
   transform: translateY(-100%);
+  opacity: 0;
+}
+
+.slide-out-fwd-center-enter-active,
+.slide-out-fwd-center-leave-active {
+   transition: cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s opacity,
+               cubic-bezier(0.550, 0.055, 0.675, 0.190) 1s transform;
+}
+
+.slide-out-fwd-center-enter-from {
+  transform: translateZ(1);
+  opacity: 1;
+}
+.slide-out-fwd-center-leave-to {
+  transform: translateZ(600px);
   opacity: 0;
 }
 </style>

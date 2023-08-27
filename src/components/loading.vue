@@ -28,16 +28,29 @@ const props = defineProps({
 
 <style scoped>
 .rotate-animation {
-  animation: rotate 2s ease infinite;
+  animation-name: rotate;
+  animation-duration: 6s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
 }
 
 @keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+0% {
+  transform: rotate(0deg);
+}
+25% {
+  transform: rotate(30deg);
+}
+50% {
+  transform: rotate(0deg);
+}
+75% {
+  transform: rotate(90deg);
+}
+100% {
+  transform: rotate(0deg);
+}
 }
 
 .slide-enter-active,
