@@ -36,7 +36,7 @@ const linkList = ref<Array<linkListType>>([
 <style scoped>
 .slide-enter-active,
 .slide-leave-active {
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 
 .slide-enter-from,

@@ -2,23 +2,10 @@
 import { onMounted, ref } from 'vue';
 import { Icon } from '@iconify/vue';
 import 'animate.css';
+import { linkList } from '../config.ts';
 
 const imgSort = ref<number>(0);
-type linkListType = { name: string, link: string; };
-const linkList = ref<Array<linkListType>>([
-    {
-        name: '官方 Twitter/X',
-        link: 'https://twitter.com/bang_dream_mygo'
-    },
-    {
-        name: '官方 Bilibili',
-        link: 'https://space.bilibili.com/1459104794'
-    },
-    {
-        name: '官方 Youtube',
-        link: 'https://www.youtube.com/channel/UC80p_16pSSHA8YmtCVdX51w?sub_confirmation=1'
-    }
-]);
+
 const playAnimation = ref<boolean[]>([
     false,
     false,
