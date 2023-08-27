@@ -37,7 +37,7 @@ onMounted(() => {
     <div class="min-h-screen" id="page1">
         <div class="flex h-screen absolute w-full p-8 md:p-16 bg-gray-400 z-0">
             <div class="w-full bg-blue-950 overflow-hidden text-center">
-                <video autoplay playsinline :muted="toggleSound" loop class=" min-h-full max-w-full object-cover inline">
+                <video autoplay playsinline :muted="toggleSound" loop class=" min-h-full min-w-full object-cover inline">
                     <source src="https://pan.bangdream.moe/mygo_bg.webm" type="video/mp4" />
                 </video>
             </div>
