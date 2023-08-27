@@ -5,6 +5,7 @@ import 'animate.css';
 import { linkList } from '../config.ts';
 
 const imgSort = ref<number>(0);
+const toggleSound = ref<boolean>(true);
 
 const playAnimation = ref<boolean[]>([
     false,
@@ -36,7 +37,7 @@ onMounted(() => {
     <div class="min-h-screen" id="page1">
         <div class="flex h-screen absolute w-full p-8 md:p-16 bg-gray-400 z-0">
             <div class="w-full bg-blue-950 overflow-hidden text-center">
-                <video autoplay muted loop class=" min-h-full max-w-full object-cover inline">
+                <video autoplay playsinline :muted="toggleSound" loop class=" min-h-full max-w-full object-cover inline">
                     <source src="../assets/vid/bg.mp4" type="video/mp4" />
                 </video>
             </div>
@@ -72,6 +73,12 @@ onMounted(() => {
                     </TransitionGroup>
                 </ul>
             </div>
+        </div>
+        <div class=" bottom-0 right-0 absolute m-8 md:m-16 z-20">
+            <button v-on:click="toggleSound = !toggleSound" class="text-white text-2xl mr-2">
+            <Icon v-if="toggleSound" icon="charm:sound-mute" />
+            <Icon v-else icon="charm:sound-up" />
+            </button>
         </div>
     </div>
 </template>
