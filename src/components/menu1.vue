@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { Icon } from '@iconify/vue';
 import smoothScroll from '../assets/smoothScroll.ts';
 
 const toggleMenu = ref<boolean>(false);
@@ -26,8 +27,14 @@ const linkList = ref<Array<linkListType>>([
     </TransitionGroup>
     <div class="fixed top-0 right-0 z-40 w-16 h-28 md:w-20 md:h-36">
         <button class="w-full h-full bg-[#3388bb] hover:bg-[#287aac] duration-500 ease" v-on:click="toggleMenu = !toggleMenu">
-            <div class="text-white rotate-90">
-                <p class="font-['Lato']">{{ toggleMenu ? 'CLOSE' : 'MENU' }}</p>
+            <div class="text-white flex flex-col text-center">
+                <div class="flex justify-center">
+                    <Icon v-if="toggleMenu" icon="teenyicons:x-outline" />
+                    <Icon v-else icon="teenyicons:align-text-justify-solid" />
+                </div>
+                <div class="h-16 flex flex-col justify-center">
+                    <p class="font-['Lato'] rotate-90">{{ toggleMenu ? 'CLOSE' : 'MENU' }}</p>
+                </div>
             </div>
         </button>
     </div>
