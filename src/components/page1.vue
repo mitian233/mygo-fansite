@@ -45,21 +45,21 @@ onMounted(() => {
             <div class="w-full bg-blue-950 bg-opacity-40">
             </div>
         </div>
-        <div class="h-screen w-full p-8 md:p-16 text-gray-100 absolute z-20">
-            <div class="">
+        <div class="h-screen w-full text-gray-100 absolute z-20">
+            <div class="pt-8 pl-8 md:pt-16 md:pl-16">
                 <img src="../assets/img/logo.svg" class="w-[60vw] m-3 md:w-[20vw] md:m-5" />
             </div>
             <div class="flex flex-row font-serif text-2xl md:text-5xl">
                 <div class="flex flex-col">
                     <div class="flex flex-row">
-                        <p class="pl-5 pb-1 my-2 bg-[#3388bb]">纵使是迷路的孩子也无妨</p>
+                        <p class="pl-16 pb-1 my-1 bg-[#3388bb]">纵使是迷路的孩子也无妨</p>
                     </div>
                     <div class="flex flex-row">
-                        <p class="pl-5 pb-1 my-2 bg-[#3388bb]">继续前进。</p>
+                        <p class="pl-16 pb-1 my-1 bg-[#3388bb]">继续前进。</p>
                     </div>
                 </div>
             </div>
-            <div class="pl-3 md:pl-10 flex flex-row">
+            <div class="ml-16 md:ml-20 flex flex-row">
                 <ul>
                     <TransitionGroup name="groupAnimation">
                         <li v-for="link in linkList">
