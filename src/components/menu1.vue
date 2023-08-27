@@ -7,7 +7,8 @@ const toggleMenu = ref<boolean>(false);
 type linkListType = { name: string, link: string; };
 const linkList = ref<Array<linkListType>>([
     {name: 'TOP', link: '#page1'},
-    {name: 'ABOUT', link: '#page2'},
+    {name: 'ON AIR', link: '#page2'},
+    {name: 'ABOUT', link: '#footer'},
 ]);
 </script>
 
@@ -17,7 +18,7 @@ const linkList = ref<Array<linkListType>>([
         </div>
         <div v-if="toggleMenu" class="fixed right-0 w-[80vw] md:w-[40vw] h-screen bg-[#3388bb] z-40 flex">
             <div class="w-full p-10 flex flex-col justify-center text-white">
-                <div class="grid grid-cols-1 md:grid-cols-2 font-['Lato'] text-xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 font-['Lato'] text-xl md:text-center text-left">
                     <div v-for="link in linkList" class="my-2">
                         <a :href="link.link" class="hover:text-gray-300 duration-300 ease" v-on:click.prevent="smoothScroll(link.link);toggleMenu=!toggleMenu"><p>{{ link.name }}</p></a>
                     </div>

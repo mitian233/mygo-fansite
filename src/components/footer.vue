@@ -4,7 +4,7 @@ import { linkList, sponsorList } from '../config.ts';
 </script>
 
 <template>
-    <div class="p-8 md:p-16 lg:px-32 lg:py-24 bg-[#172c3f] font-['Lato','Noto_Serif_SC'] " id="page2">
+    <div class="p-8 md:p-16 lg:px-32 lg:py-24 bg-[#172c3f] font-['Lato','Noto_Serif_SC'] " id="footer">
         <div class="grid grid-cols-1 md:grid-cols-2 mb-5 text-white">
             <div class="mb-5 md:mb-0">
                 <img src="../assets/img/logo.svg" class="w-1/2 md:w-1/3" />

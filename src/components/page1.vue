@@ -52,21 +52,21 @@ onMounted(() => {
             <div class="flex flex-row font-serif text-2xl md:text-5xl">
                 <div class="flex flex-col">
                     <div class="flex flex-row">
-                        <p class="pl-16 pb-1 my-1 bg-[#3388bb]">纵使是迷路的孩子也无妨</p>
+                        <p class="pl-8 md:pl-16 pb-1 my-1 bg-[#3388bb]">纵使是迷路的孩子也无妨</p>
                     </div>
                     <div class="flex flex-row">
-                        <p class="pl-16 pb-1 my-1 bg-[#3388bb]">继续前进。</p>
+                        <p class="pl-8 md:pl-16 pb-1 my-1 bg-[#3388bb]">继续前进。</p>
                     </div>
                 </div>
             </div>
-            <div class="ml-16 md:ml-20 flex flex-row">
+            <div class="ml-12 md:ml-20 flex flex-row">
                 <ul>
                     <TransitionGroup name="groupAnimation">
                         <li v-for="link in linkList">
                             <a :href="link.link"
                                 class="text-xl text-gray-100 hover:text-[#3388bb] ease duration-100 flex flex-row items-center">
                                 <p>{{ link.name }}</p>
-                                <Icon icon="akar-icons:arrow-up-right" class="text-gray-100" />
+                                <Icon icon="akar-icons:arrow-up-right" />
                             </a>
                         </li>
                     </TransitionGroup>
