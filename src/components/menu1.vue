@@ -13,13 +13,13 @@ const linkList = ref<Array<linkListType>>([
 
 <template>
     <TransitionGroup name="slide">
-        <div v-if="toggleMenu" class="fixed w-full h-screen bg-black opacity-40 z-40">
+        <div v-if="toggleMenu" class="fixed w-full h-screen bg-black opacity-40 z-40" v-on:click="toggleMenu = !toggleMenu">
         </div>
         <div v-if="toggleMenu" class="fixed right-0 w-[80vw] md:w-[40vw] h-screen bg-[#3388bb] z-40 flex">
             <div class="w-full p-10 flex flex-col justify-center text-white">
                 <div class="grid grid-cols-1 md:grid-cols-2 font-['Lato'] text-xl">
                     <div v-for="link in linkList" class="my-2">
-                        <a :href="link.link" v-on:click.prevent="smoothScroll(link.link);toggleMenu=!toggleMenu"><p>{{ link.name }}</p></a>
+                        <a :href="link.link" class="hover:text-gray-300 duration-300 ease" v-on:click.prevent="smoothScroll(link.link);toggleMenu=!toggleMenu"><p>{{ link.name }}</p></a>
                     </div>
                 </div>
             </div>

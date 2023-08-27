@@ -11,7 +11,7 @@ import { linkList, sponsorList } from '../config.ts';
             </div>
             <div>
                 <div class="flex flex-wrap text-base md:text-xl">
-                    <a v-for="link in linkList" :href="link.link" class="flex flex-row items-center mr-2 md:mr-10">
+                    <a v-for="link in linkList" :href="link.link" class="flex flex-row items-center mr-2 md:mr-10 hover:text-gray-300 duration-300 ease" >
                         <Icon :icon="link.icon"></Icon>
                         <p>&nbsp;{{ link.name }}</p>
                     </a>
