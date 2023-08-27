@@ -38,7 +38,7 @@ onMounted(() => {
         <div class="flex h-screen absolute w-full p-8 md:p-16 bg-gray-400 z-0">
             <div class="w-full bg-blue-950 overflow-hidden text-center">
                 <video autoplay playsinline :muted="toggleSound" loop class=" min-h-full max-w-full object-cover inline">
-                    <source src="../assets/vid/bg.mp4" type="video/mp4" />
+                    <source src="https://pic.bangdream.moe/images/bg.mp4" type="video/mp4" />
                 </video>
             </div>
         </div>
