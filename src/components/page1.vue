@@ -34,19 +34,25 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="min-h-screen" id="page1">
-        <div class="flex h-screen absolute w-full p-8 md:p-16 bg-gray-400 z-0">
+    <div class="min-h-[100dvh]" id="page1">
+        <div class="flex h-[100dvh] absolute w-full p-8 md:p-16 bg-gray-400 z-0">
             <div class="w-full bg-blue-950 overflow-hidden text-center">
                 <video autoplay playsinline :muted="toggleSound" loop class=" min-h-full min-w-full object-cover inline">
                     <source src="https://pan.bangdream.moe/mygo_bg.webm" type="video/mp4" />
                 </video>
             </div>
         </div>
-        <div class="flex h-screen w-full p-8 md:p-16 absolute z-10">
+        <div class="flex h-[100dvh] w-full p-8 md:p-16 absolute z-10">
             <div class="w-full bg-blue-950 bg-opacity-40">
             </div>
+            <div class="absolute bottom-0 right-0 m-8 md:m-16 z-20">
+            <button v-on:click="toggleSound = !toggleSound" class="text-white text-2xl mr-2">
+            <Icon v-if="toggleSound" icon="charm:sound-mute" />
+            <Icon v-else icon="charm:sound-up" />
+            </button>
         </div>
-        <div class="h-screen w-full text-gray-100 absolute z-20">
+        </div>
+        <div class="w-full text-gray-100 absolute z-20">
             <div class="pt-8 pl-8 md:pt-16 md:pl-16">
                 <img src="../assets/img/logo.svg" class="w-[60vw] m-3 md:w-[20vw] md:m-5" />
             </div>
@@ -73,12 +79,6 @@ onMounted(() => {
                     </TransitionGroup>
                 </ul>
             </div>
-        </div>
-        <div class=" bottom-0 right-0 absolute m-8 md:m-16 z-20">
-            <button v-on:click="toggleSound = !toggleSound" class="text-white text-2xl mr-2">
-            <Icon v-if="toggleSound" icon="charm:sound-mute" />
-            <Icon v-else icon="charm:sound-up" />
-            </button>
         </div>
     </div>
 </template>
